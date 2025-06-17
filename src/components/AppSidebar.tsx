@@ -31,8 +31,8 @@ export function AppSidebar() {
 
   const isActive = (path: string) => currentPath === path;
   const getNavCls = ({ isActive }: { isActive: boolean }) =>
-    isActive 
-      ? "bg-gradient-to-r from-lime-500/20 to-cyan-500/20 text-lime-400 border-l-2 border-lime-400 font-medium shadow-lg shadow-lime-500/20" 
+    isActive
+      ? "bg-gradient-to-r from-lime-500/20 to-cyan-500/20 text-lime-400 border-l-2 border-lime-400 font-medium shadow-lg shadow-lime-500/20"
       : "hover:bg-slate-800/50 hover:text-cyan-300 transition-all duration-300";
 
   return (
