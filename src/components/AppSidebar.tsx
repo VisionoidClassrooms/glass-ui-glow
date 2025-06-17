@@ -38,7 +38,8 @@ export function AppSidebar() {
 
   return (
     <Sidebar
-      className={`${collapsed ? "w-16" : "w-64"} border-r border-slate-800/50 bg-slate-950/80 backdrop-blur-xl transition-all duration-300`}
+{/*       className={`${collapsed ? "w-16" : "w-64"} border-r border-slate-800/50 bg-slate-950/80 backdrop-blur-xl transition-all duration-300`} */}
+  className={`${collapsed ? "w-16" : "w-64"} bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950`}
       collapsible="icon"
     >
       <div className="p-4 border-b border-slate-800/50">
