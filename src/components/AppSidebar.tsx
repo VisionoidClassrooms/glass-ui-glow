@@ -58,7 +58,7 @@ export function AppSidebar() {
       </div>
 
       <SidebarContent className="p-2">
-        <SidebarGroup defaultOpen={isExpanded}>
+        <SidebarGroup>
           <SidebarGroupLabel className="text-slate-400 text-xs uppercase tracking-wider mb-2">
             {!collapsed && "Navigation"}
           </SidebarGroupLabel>
