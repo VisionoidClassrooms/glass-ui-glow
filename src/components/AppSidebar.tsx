@@ -24,9 +24,10 @@ const items = [
 ];
 
 export function AppSidebar() {
-  const { collapsed } = useSidebar();
+  const { state } = useSidebar();
   const location = useLocation();
   const currentPath = location.pathname;
+  const collapsed = state === "collapsed";
 
   const isActive = (path: string) => currentPath === path;
   const isExpanded = items.some((i) => isActive(i.url));
@@ -38,7 +39,7 @@ export function AppSidebar() {
   return (
     <Sidebar
       className={`${collapsed ? "w-16" : "w-64"} border-r border-slate-800/50 bg-slate-950/80 backdrop-blur-xl transition-all duration-300`}
-      collapsible
+      collapsible="icon"
     >
       <div className="p-4 border-b border-slate-800/50">
         <div className="flex items-center gap-2">
@@ -57,7 +58,7 @@ export function AppSidebar() {
       </div>
 
       <SidebarContent className="p-2">
-        <SidebarGroup open={isExpanded}>
+        <SidebarGroup defaultOpen={isExpanded}>
           <SidebarGroupLabel className="text-slate-400 text-xs uppercase tracking-wider mb-2">
             {!collapsed && "Navigation"}
           </SidebarGroupLabel>
